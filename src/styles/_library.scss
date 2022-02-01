@@ -1,0 +1,59 @@
+@import "./variables";
+@import "./mixins";
+
+.library {
+  background: $sidebar-color;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 20rem;
+  color: white;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 2rem;
+  overflow-y: scroll;
+  box-shadow: 13px 10px 30px rgba(0, 0, 0, 50px);
+  transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+  z-index: 999;
+
+  &_header {
+    font-size: 2rem;
+    padding-bottom: 2rem;
+    text-transform: capitalize;
+  }
+}
+.song-item-contanier {
+  display: flex;
+  flex-direction: column;
+}
+.song_item {
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+
+  &:hover {
+    background: $hover-song-item-color;
+    cursor: pointer;
+  }
+
+  &_image {
+    width: 40%;
+    margin-right: 20px;
+  }
+}
+
+.closed-sidar {
+  right: -90rem;
+}
+
+.played-song {
+  background: $hover-song-item-color !important;
+}
+@media (max-width: 600px) {
+  .library {
+    width: 100vw;
+  }
+}
